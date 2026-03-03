@@ -42,3 +42,23 @@ function callbackReceita(data) {
         `;
     }
 }
+
+function callbackReceita(data) {
+    const resultadoDiv = document.getElementById('resultado');
+
+    if (data.status === "ERROR") {
+        resultadoDiv.innerHTML = `<p style="color: red;">Erro: ${data.message}</p>`;
+    } else {
+        // Montando a string de endereço completa
+        const enderecoCompleto = `${data.logradouro}, ${data.numero} ${data.complemento ? '- ' + data.complemento : ''} | ${data.bairro} | ${data.municipio}-${data.uf} | CEP: ${data.cep}`;
+
+        resultadoDiv.innerHTML = `
+            <p><strong>Nome:</strong> ${data.nome}</p>
+            <p><strong>Fantasia:</strong> ${data.fantasia || 'N/A'}</p>
+            <p><strong>Situação:</strong> ${data.situacao}</p>
+            <p><strong>Atividade Principal:</strong> ${data.atividade_principal[0].text}</p>
+            <p><strong>Telefone:</strong> ${data.telefone}</p>
+            <p><strong>Endereço:</strong> ${enderecoCompleto}</p>
+        `;
+    }
+}
