@@ -1,0 +1,142 @@
+/* Importando fontes temáticas */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Special+Elite&family=Courier+Prime:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ff0084;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Special Elite', cursor;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #fdfdfd;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    border: 2px solid #000;
+    box-shadow: 15px 15px 0px #000;
+    position: relative;
+    transform: rotate(-1deg);
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+h1::after {
+    content: "RECEPÇÕES WS - BURN BOOK"; /* Atualizado para o tema */
+    display: block;
+    font-size: 1rem;
+    color: #ff0084;
+    margin-top: -10px;
+    text-decoration: underline;
+}
+
+#cnpj {
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #000;
+    background: #fff;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.2rem;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 0px #ff0084;
+}
+
+button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px #ff0084;
+    background: #333;
+}
+
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px dashed #ff0084;
+    background: #fffafa;
+    position: relative;
+    word-wrap: break-word;
+}
+
+#resultado::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 60px;
+    height: 60px;
+    background-image: url('https://pngimg.com/uploads/lipstick_footprint/lipstick_footprint_PNG32.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(15deg);
+    opacity: 0.8;
+}
+
+#resultado p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #000;
+    border-bottom: 1px dotted #ccc;
+}
+
+#resultado strong {
+    color: #ff0084;
+    font-family: 'Courier Prime', monospace;
+    text-transform: uppercase;
+}
+
+#resultado p[style*="color: red;"] {
+    background: #000;
+    color: #fff !important;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 100px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(-30deg);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        transform: rotate(0deg);
+    }
+}
